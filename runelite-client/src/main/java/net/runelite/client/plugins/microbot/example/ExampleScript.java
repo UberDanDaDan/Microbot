@@ -18,6 +18,7 @@ public class ExampleScript extends Script {
                 long startTime = System.currentTimeMillis();
 
                 // CODE HERE
+                Microbot.log("Quick Script");
 
                 long endTime = System.currentTimeMillis();
                 long totalTime = endTime - startTime;
