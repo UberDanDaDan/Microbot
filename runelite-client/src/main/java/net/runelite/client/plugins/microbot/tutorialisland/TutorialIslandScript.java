@@ -429,7 +429,10 @@ public class TutorialIslandScript extends Script {
             }
         } else if (Microbot.getVarbitPlayerValue(281) == 650) {
             Rs2NpcModel chicken = Rs2Npc.getNpcs("chicken").findFirst().orElse(null);
-            Rs2Magic.castOn(MagicAction.WIND_STRIKE, chicken);
+            Microbot.log(chicken.toString());
+            if (chicken != null) {
+                Rs2Magic.castOn(MagicAction.WIND_STRIKE, chicken);
+            } else Microbot.log("Ops no chicken around");
         } else if (Microbot.getVarbitPlayerValue(281) == 670) {
             Rs2Dialogue.clickContinue();
             if (isInDialogue()) {
